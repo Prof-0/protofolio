@@ -1,4 +1,4 @@
-🌐 Personal Social Links \& QR Hub
+\##🌐 Personal Social Links \& QR Hub
 
 
 
@@ -8,7 +8,7 @@ Designed for fast sharing, professional presentation, and easy customization.
 
 
 
-✨ Features
+\##✨ Features
 
 
 
@@ -36,9 +36,11 @@ Designed for fast sharing, professional presentation, and easy customization.
 
 
 
-🧱 Project Structure
+\##🧱 Project Structure
 
 .
+
+├──assests/"your image".png #edit the name in code
 
 ├── index.html          # Main landing page
 
@@ -54,7 +56,7 @@ Designed for fast sharing, professional presentation, and easy customization.
 
 
 
-🚀 Getting Started
+\##🚀 Getting Started
 
 1️⃣ Clone the repository
 
@@ -64,7 +66,7 @@ cd your-repo-name
 
 
 
-2️⃣ Generate QR Codes
+\##2️⃣ Generate QR Codes
 
 
 
@@ -84,7 +86,7 @@ This will generate high-resolution QR images inside the qrcodes/ folder.
 
 
 
-3️⃣ Open the Page
+\##3️⃣ Open the Page
 
 
 
@@ -102,9 +104,9 @@ Or deploy it directly using GitHub Pages, Netlify, or Vercel.
 
 
 
-🛠 Customization
+\##🛠 Customization
 
-🔗 Add / Edit Social Links
+\##🔗 Add / Edit Social Links
 
 
 
@@ -128,7 +130,7 @@ Re-run the script to regenerate QR codes.
 
 
 
-🎨 Styling
+\##🎨 Styling
 
 
 
@@ -162,7 +164,7 @@ Fonts
 
 
 
-📸 Preview Behavior
+\##📸 Preview Behavior
 
 
 
@@ -174,7 +176,7 @@ Click anywhere outside to close
 
 
 
-🔐 Security Notes
+\##🔐 Security Notes
 
 
 
@@ -194,7 +196,7 @@ Safe for personal branding \& offline sharing
 
 
 
-📄 License
+\##📄 License
 
 
 
@@ -202,7 +204,7 @@ This project is open-source and free to use for personal or professional purpose
 
 
 
-👤 Author
+\##👤 Author
 
 
 
