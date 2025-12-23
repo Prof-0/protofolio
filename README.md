@@ -1,4 +1,4 @@
-\*\*🌐 Personal Social Links \& QR Hub\*\*
+🌐 Personal Social Links \& QR Hub
 
 
 
