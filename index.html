@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahmoud Elgazar | Cybersecurity Engineer</title>
+  <meta name="description" content="Portfolio of Mahmoud Elgazar, a Cybersecurity-focused Software Engineer specialized in ethical hacking and secure system design." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mahmoud Elgazar | Cybersecurity Engineer" />
+  <meta property="og:description" content="Cybersecurity-focused Software Engineer. Welcome to my digital portfolio." />
+  <meta property="og:image" content="assests/thumbnail.png" />
+  <link rel="icon" href="assests/thumbnail.png" type="image/png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="core/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">ZERO<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="greeting">Hello, I'm</p>
+          <h1 class="glitch" data-text="Mahmoud Elgazar">Mahmoud Elgazar</h1>
+          <h2 class="subtitle">Cybersecurity Engineer & <span class="highlight">Ethical Hacker</span></h2>
+          <p class="summary">
+            Cybersecurity-focused Computer Science student with a strong passion for ethical hacking, 
+            secure system design, and privacy-driven software development.
+          </p>
+          <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+        <!-- Optional decorative element or avatar can go here -->
+      </div>
+      <div class="scroll-down">
+        <a href="#about"><i class="fas fa-chevron-down"></i></a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="data:image/webp;base64,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" alt="Mahmoud Elgazar Avatar" class="profile-img" />
+          </div>
+          <div class="about-text">
+            <p>
+              I am a <strong>Cybersecurity-focused Computer Science student</strong> with a relentless curiosity for how systems work—and how they can be broken. My journey began with a fascination for privacy and secure communication, evolving into a deep dive into offensive and defensive security techniques.
+            </p>
+            <p>
+              Experienced in building clean, reliable tools with a security-first mindset. I bridge the gap between software engineering and cybersecurity, ensuring that the code I write is not just functional, but resilient against real-world threats.
+            </p>
+            <div class="stats-row">
+              <div class="stat-item">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Years Coding</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Projects Built</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Ethical Mindset</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="skills-wrapper">
+          
+          <!-- Category 1 -->
+          <div class="skill-category">
+            <h3><i class="fas fa-shield-halved"></i> Cybersecurity</h3>
+            <div class="skill-tags">
+              <span>Penetration Testing</span>
+              <span>Network Security</span>
+              <span>Cryptography</span>
+              <span>Ethical Hacking</span>
+              <span>Secure Coding</span>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Languages</h3>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>C++</span>
+              <span>JavaScript</span>
+              <span>HTML/CSS</span>
+              <span>SQL</span>
+              <span>Bash</span>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="skill-category">
+            <h3><i class="fas fa-toolbox"></i> Tools & OS</h3>
+            <div class="skill-tags">
+              <span>Linux (Kali/Ubuntu)</span>
+              <span>Burp Suite</span>
+              <span>Metasploit</span>
+              <span>Git/GitHub</span>
+              <span>Docker</span>
+              <span>Wireshark</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <h2 class="section-title">Selected Operations</h2>
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <i class="fas fa-folder-open folder-icon"></i>
+                <a href="https://github.com/ENG-M7MOUD/ZeroCrypto" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+              </div>
+              <h3 class="project-title">ZeroCrypto</h3>
+              <p class="project-desc">
+                A secure encryption-focused project designed around privacy, vault concepts, 
+                and data protection principles. Implements modern cryptographic standards.
+              </p>
+              <ul class="project-tech">
+                <li>C++</li>
+                <li>Cryptography</li>
+                <li>Security</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <i class="fas fa-folder-open folder-icon"></i>
+                <a href="https://github.com/ENG-M7MOUD/nature-gallery" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+              </div>
+              <h3 class="project-title">Nature Gallery</h3>
+              <p class="project-desc">
+                A clean, visual-focused gallery project demonstrating UI design, 
+                static web architecture, and presentation quality.
+              </p>
+              <ul class="project-tech">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Responsive UI</li>
+              </ul>
+            </div>
+          </article>
+          
+          <!-- Placeholder for future projects -->
+          <article class="project-card placeholder-card">
+            <div class="project-content">
+                <div class="project-header">
+                  <i class="fas fa-plus folder-icon"></i>
+                </div>
+                <h3 class="project-title">More Coming Soon</h3>
+                <p class="project-desc">
+                  Constantly working on new tools and research. 
+                  Check my GitHub for the latest updates.
+                </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <h2 class="section-title">Experience & Timeline</h2>
+        <div class="timeline">
+          
+          <!-- Item -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 - Present</div>
+            <div class="timeline-content">
+              <h3>Computer Science Student & Researcher</h3>
+              <h4>University / Self-Learner</h4>
+              <p>
+                Deepening knowledge in data structures, algorithms, and low-level system architecture. 
+                Leading independent research into binary exploitation and web application security.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2022 - 2023</div>
+            <div class="timeline-content">
+              <h3>Open Source Contributor</h3>
+              <h4>GitHub</h4>
+              <p>
+                Actively contributing to security tools and participating in CTF competitions. 
+                Built ZeroCrypto to solve personal data privacy challenges.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certs" class="section certs-section">
+      <div class="container">
+         <h2 class="section-title">Certifications</h2>
+         <div class="certs-grid">
+            <div class="cert-card">
+               <i class="fas fa-certificate cert-icon"></i>
+               <h3>Ethical Hacking Certification</h3>
+               <p>Issuer Name (Placeholder)</p>
+               <span class="cert-date">2024</span>
+            </div>
+            <!-- Add more certs here -->
+         </div>
+      </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section id="contact" class="section contact-section">
+      <div class="container contact-wrapper">
+        <h2 class="section-title">Initialize Handshake</h2>
+        <p class="contact-text">
+          Interested in collaboration, security auditing, or just want to say hi? 
+          My inbox is always open.
+        </p>
+
+        <div class="social-links">
+           <a href="mailto:elgazar.m7moud@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+           <a href="https://github.com/ENG-M7MOUD" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+           <a href="https://www.linkedin.com/in/m7moud9i" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+           <a href="https://t.me/m7moud9i" target="_blank" class="social-btn" title="Telegram"><i class="fab fa-telegram"></i></a>
+           <a href="https://twitter.com/m7moud9i" target="_blank" class="social-btn" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
+        
+        <!-- Legacy QR Code Section Integration (Optional / Hidden by default or subtle) -->
+        <div class="qr-download">
+           <p><small>Scan to connect on mobile</small></p>
+           <i class="fas fa-qrcode"></i>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 <span class="highlight">Mahmoud Elgazar</span>. All Rights Reserved.</p>
+      <p class="footer-note">Designed & Built with <i class="fas fa-code"></i> and Security in mind.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Simple Hamburger Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when link is clicked
+    document.querySelectorAll('.nav-links li a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Scroll Header Effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
