@@ -86,7 +86,7 @@ links = {
 > This project is licensed under the MIT License.
 
 # 👤 Author
-###      Prof0 *"zero"*
+###      Prof0 ## *"Zero"*
 
 ## 🛡️ Cybersecurity
 
