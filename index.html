@@ -333,7 +333,7 @@
             Reach out through any of the channels below.
           </p>
           <div class="social-grid">
-            <a href="mailto:prof0.contact@gmail.com" class="social-link" aria-label="Email">
+            <a href="mailto:contact@prof0.sec" class="social-link" aria-label="Email">
               <i class="fas fa-envelope"></i>
               <span>Email</span>
             </a>
@@ -341,11 +341,11 @@
               <i class="fab fa-github"></i>
               <span>GitHub</span>
             </a>
-            <a href="https://linkedin.com/in/prof0" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <a href="https://linkedin.com/in/prof-0" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
               <i class="fab fa-linkedin"></i>
               <span>LinkedIn</span>
             </a>
-            <a href="https://t.me/iprof_0" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Telegram">
+            <a href="https://t.me/prof_0" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Telegram">
               <i class="fab fa-telegram"></i>
               <span>Telegram</span>
             </a>
@@ -418,25 +418,24 @@
 
       // Turnstile Success Callback
       window.onTurnstileSuccess = async function(token) {
-        try {
-          // Verify with Worker
-          const response = await fetch('https://iprof-0.pages.dev/verify-turnstile', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ token: token })
-          });
+    const response = await fetch('https://iprof-0.pages.dev/verify-turnstile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: token })
+    });
 
-          if (response.ok) {
-            turnstileWrapper.style.display = 'none';
-            agentContainer.style.display = 'block';
-            agentContainer.innerHTML = '<iframe id="agentFrame" src="agent.html" style="width:100%; height:100%; border:0;" title="AI Security Assistant"></iframe>';
-          } else {
-            alert("Verification failed. Please refresh and try again.");
-          }
-        } catch (error) {
-          console.error("Verification Error:", error);
-        }
-      };
+    if (response.ok) {
+        // أهم خطوة: تسجيل الدخول في الـ Session الخاص بالدومين الحالي
+        sessionStorage.setItem('zain_verified', 'true');
+        
+        document.getElementById('turnstile-wrapper').style.display = 'none';
+        const agentContainer = document.getElementById('agent-frame-container');
+        agentContainer.style.display = 'block';
+        
+        // استدعاء الايجنت
+        agentContainer.innerHTML = '<iframe id="agentFrame" src="agent.html" style="width:100%; height:100%; border:0;"></iframe>';
+    }
+};
 
       function openModal() {
         if (!modal) return;
