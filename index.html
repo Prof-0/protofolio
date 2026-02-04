@@ -420,7 +420,7 @@
       window.onTurnstileSuccess = async function(token) {
         try {
           // Verify with Worker
-          const response = await fetch('/verify-turnstile', {
+          const response = await fetch('https://iprof-0.pages.dev/verify-turnstile', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ token: token })
