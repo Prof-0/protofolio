@@ -27,8 +27,8 @@
 
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
-      <a href="#hero" class="logo" aria-label="Prof-0 Home">
-        PROF<span class="dot">-</span>0
+      <a href="#hero" class="logo glitch" aria-label="ZERO. Home" data-text="ZERO.">
+          ZERO.<span class="dot"></span>
       </a>
       <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
         <span class="bar"></span>
@@ -36,6 +36,7 @@
         <span class="bar"></span>
       </button>
       <ul class="nav-links">
+        <li><a href="#hero">$ whoami</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -49,30 +50,59 @@
     <section id="hero" class="hero-section">
       <div class="container hero-content">
         <div class="hero-text">
-          <p class="greeting">$ whoami</p>
-          <h1 class="glitch" data-text="PROF-0">PROF-0</h1>
-          <h2 class="subtitle">
-            Cybersecurity Engineer <span class="separator">|</span> 
-            <span class="highlight">Ethical Hacker</span>
-          </h2>
-          <p class="summary">
-            Security researcher focused on cyber defense, ethical hacking, and secure systems architecture. 
-            Bridging the gap between offensive security and AI-powered automation.
-          </p>
-          <p class="philosophy">"No System is Secure"</p>
-          <div class="cta-buttons">
-            <a href="#projects" class="btn btn-primary">
-              <i class="fas fa-terminal"></i> View Operations
-            </a>
-            <button id="open-agent-btn" class="btn btn-agent">
-              <i class="fas fa-robot"></i> AI Assistant
-            </button>
-            <a href="#contact" class="btn btn-secondary">
-              <i class="fas fa-envelope"></i> Contact
-            </a>
-          </div>
+    <a href="#whoami" class="greeting greeting-link">
+        $ whoami
+    </a>
+    
+    <h1 class="glitch" data-text="PROF-0">PROF-0</h1>
+    
+    <h2 class="subtitle">
+        Cybersecurity Engineer <span class="separator">|</span> 
+        <span class="highlight">Ethical Hacker</span>
+    </h2>
+
+    <div class="hero-terminal" id="whoami">
+        <div class="terminal-bar">
+            <div class="term-dots">
+                <span class="t-dot red"></span>
+                <span class="t-dot yellow"></span>
+                <span class="t-dot green"></span>
+            </div>
+            <span class="term-user">root@prof0: ~</span>
         </div>
-      </div>
+        <div class="terminal-window">
+            <div class="terminal-content" id="terminal-logic">
+                <p>
+                    <span style="color: #50fa7b;">┌──(</span><span style="color: #ff0000; font-weight: bold;">root㉿prof0</span><span style="color: #50fa7b;">)-[</span><span style="color: #f1fa8c;">~</span><span style="color: #50fa7b;">]</span><br>
+                    <span style="color: #50fa7b;">└─</span><span style="color: #ff79c6;">$</span> <span id="typed-command"></span><span id="typing-cursor" class="t-cursor"></span>
+                </p>
+
+                <div id="execution-result" style="display: none; margin-top: 10px;">
+                    <p class="t-output">Security researcher focused on cyber defense, ethical hacking, and secure systems architecture. Bridging the gap between offensive security and AI-powered automation.</p>
+                    <p style="margin-top: 10px;">
+                        <span style="color: #50fa7b;">┌──(</span><span style="color: #ff0000; font-weight: bold;">root㉿prof0</span><span style="color: #50fa7b;">)-[</span><span style="color: #f1fa8c;">~</span><span style="color: #50fa7b;">]</span><br>
+                        <span style="color: #50fa7b;">└─</span><span style="color: #ff79c6;">$</span> <span class="t-cursor"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <p class="philosophy" style="color: #ff0000; margin-top: 20px;">"No System is Secure"</p>
+
+    <div class="cta-buttons">
+        <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-terminal"></i> View Operations
+        </a>
+        <button id="open-agent-btn" class="btn btn-agent">
+            <i class="fas fa-robot"></i> AI Assistant
+        </button>
+        <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i> Contact
+        </a>
+    </div>
+</div>
+      
       <div class="scroll-indicator">
         <a href="#about" aria-label="Scroll to about section">
           <i class="fas fa-chevron-down"></i>
@@ -489,6 +519,38 @@
       });
 
     })();
+    function startTerminalSimulation() {
+    const commandElement = document.getElementById('typed-command');
+    const cursor = document.getElementById('typing-cursor');
+    const resultSection = document.getElementById('execution-result');
+    const commandText = "cat whoami.txt";
+    let i = 0;
+
+    // وظيفة كتابة الأمر حرفاً بحرف
+    function typeCommand() {
+        if (i < commandText.length) {
+            commandElement.innerHTML += commandText.charAt(i);
+            i++;
+            setTimeout(typeCommand, 100); // سرعة كتابة الأمر
+        } else {
+            // بعد الانتهاء من الكتابة.. انتظر قليلاً ثم أظهر النتيجة
+            setTimeout(executeCommand, 500);
+        }
+    }
+
+    function executeCommand() {
+        // إخفاء مؤشر الكتابة من السطر الأول (اختياري)
+        cursor.style.display = 'none';
+        
+        // إظهار نتيجة التنفيذ والبرومبت الأخير
+        resultSection.style.display = 'block';
+    }
+
+    // ابدأ العملية بعد 800ms من تحميل الصفحة
+    setTimeout(typeCommand, 800);
+}
+
+window.addEventListener('load', startTerminalSimulation);
   </script>
 </body>
 </html>
