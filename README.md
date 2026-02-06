@@ -55,7 +55,7 @@ No frameworks. No build systems. No abstractions.
 ├── index.html  
 ├── core/  
 │   └── style.css  
-├── assests/  
+├── assets/  
 │   └── thumbnail.png  
 └── README.md  
 

@@ -1,0 +1,8 @@
+{
+    "API_URL": "https://iprof-0.pages.dev",
+    "TIMEOUTS": {
+        "WARN_1": 60000,
+        "COUNTDOWN": 270000,
+        "LOGOUT": 300000
+    }
+}
